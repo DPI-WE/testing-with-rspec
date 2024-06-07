@@ -16,7 +16,7 @@ Key Features of RSpec:
 ## Setting Up RSpec in a Rails Project
 To start using RSpec in your Rails project, follow these steps:
 
-1. Add RSpec to Your `Gemfile`
+#### 1. Add RSpec to Your `Gemfile`
 
 ```ruby
 # Gemfile
@@ -25,7 +25,7 @@ group :development, :test do
 end
 ```
 
-2. Install the Gem
+#### 2. Install the Gem
 
 Run the following command to install the gem and generate the necessary configuration files:
 
@@ -36,7 +36,7 @@ rails generate rspec:install
 
 This command creates the spec directory and the `.rspec` and `spec_helper.rb` files, which are used to configure RSpec.
 
-3. Configuration
+#### 3. Configuration
 You can customize your RSpec configuration in the `.rspec` file and the `spec_helper.rb` or rails_helper.rb files. For example, to enable colored output in your test results, add the following line to `.rspec`:
 
 ```bash
@@ -46,7 +46,7 @@ You can customize your RSpec configuration in the `.rspec` file and the `spec_he
 ## Writing Your First Test
 Let's start by writing a simple test for a Rails model. Suppose we have a User model with a name attribute.
 
-1. Generate a Model Spec
+#### 1. Generate a Model Spec
 Run the following command to generate a spec file for the `User` model:
 
 ```bash
@@ -55,7 +55,7 @@ rails generate rspec:model user
 
 This command creates a file named `user_spec.rb` in the `spec/models` directory.
 
-2. Write a Basic Test
+#### 2. Write a Basic Test
 Open the `spec/models/user_spec.rb` file and add the following test:
 
 ```ruby
@@ -77,7 +77,7 @@ end
 
 This test checks if a User is valid when it has a name and invalid when the name is nil.
 
-3. Run the Test
+#### 3. Run the Test
 Execute the test suite by running the following command:
 
 ```bash
@@ -89,7 +89,7 @@ RSpec will run the tests and provide output indicating whether they passed or fa
 ## Testing Rails Controllers
 RSpec makes it easy to write tests for Rails controllers. Let's write a test for the `UsersController`.
 
-1. Generate a Controller Spec
+#### 1. Generate a Controller Spec
 Run the following command to generate a spec file for the `UsersController`:
 
 ```bash
@@ -98,7 +98,7 @@ rails generate rspec:controller users
 
 This command creates a file named `users_controller_spec.rb` in the `spec/controllers` directory.
 
-2. Write a Test for an Action
+#### 2. Write a Test for an Action
 Open the `spec/controllers/users_controller_spec.rb` file and add the following test for the index action:
 
 ```ruby
@@ -123,7 +123,7 @@ end
 
 This test verifies that the index action returns a successful response and assigns the correct users to the `@users` variable.
 
-3. Run the Controller Test
+#### 3. Run the Controller Test
 Run the test suite again to execute the controller tests:
 
 ```bash
@@ -133,7 +133,7 @@ bundle exec rspec
 ## Testing Rails Views
 RSpec allows you to write tests for Rails views to ensure they render correctly and display the expected content.
 
-1. Generate a View Spec
+#### 1. Generate a View Spec
 Run the following command to generate a spec file for the index view of the Users controller:
 
 ```bash
@@ -142,7 +142,7 @@ rails generate rspec:view users index
 
 This command creates a file named `index.html.erb_spec.rb` in the `spec/views/users` directory.
 
-2. Write a Test for the View
+#### 2. Write a Test for the View
 Open the `spec/views/users/index.html.erb_spec.rb` file and add the following test:
 
 ```ruby
@@ -166,7 +166,7 @@ end
 
 This test verifies that the index view renders and displays the names of all users assigned to `@users`.
 
-3. Run the View Test
+#### 3. Run the View Test
 Run the test suite again to execute the view tests:
 
 ```bash
@@ -176,7 +176,7 @@ bundle exec rspec
 ## Testing Rails Helpers
 RSpec also supports testing Rails helpers to ensure they produce the correct output.
 
-1. Generate a Helper Spec
+#### 1. Generate a Helper Spec
 Run the following command to generate a spec file for the UsersHelper:
 
 ```bash
@@ -185,7 +185,7 @@ rails generate rspec:helper users
 
 This command creates a file named `users_helper_spec.rb` in the `spec/helpers` directory.
 
-2. Write a Test for the Helper
+#### 2. Write a Test for the Helper
 Open the `spec/helpers/users_helper_spec.rb` file and add the following test:
 
 ```ruby
@@ -203,7 +203,7 @@ end
 
 This test verifies that the format_name helper method correctly formats a name.
 
-3. Run the Helper Test
+#### 3. Run the Helper Test
 Run the test suite again to execute the helper tests:
 
 ```bash
@@ -213,10 +213,10 @@ bundle exec rspec
 ## Testing Rails Routes
 Testing routes ensures that they are correctly mapped to their intended actions.
 
-1. Generate a Routing Spec
+#### 1. Generate a Routing Spec
 Create a new file named `routes_spec.rb` in the `spec/routing` directory.
 
-2. Write a Test for a Route
+#### 2. Write a Test for a Route
 Open the `spec/routing/routes_spec.rb` file and add the following test:
 
 ```ruby
@@ -232,7 +232,7 @@ end
 
 This test verifies that the `/users` URL is correctly routed to the index action of the `UsersController`.
 
-3. Run the Routes Test
+#### 3. Run the Routes Test
 Run the test suite again to execute the routing tests:
 
 ```bash
@@ -242,7 +242,7 @@ bundle exec rspec
 ## Running Tests Automatically
 You can automate running your tests whenever you make changes using tools like [Guard](https://github.com/guard/guard). This setup allows you to get instant feedback as you develop your application.
 
-1. Add Guard to Your Gemfile
+#### 1. Add Guard to Your Gemfile
 
 ```ruby
 # Gemfile
@@ -252,7 +252,7 @@ group :development do
 end
 ```
 
-2. Install Guard
+#### 2. Install Guard
 Run the following commands to install Guard and set up the RSpec guard:
 
 ```bash
@@ -260,7 +260,7 @@ bundle install
 bundle exec guard init rspec
 ```
 
-3. Run Guard
+#### 3. Run Guard
 Start Guard by running:
 
 ```bash
@@ -274,7 +274,7 @@ End-to-end (E2E) tests, also known as integration tests, simulate real user inte
 
 ### Setting Up Capybara
 
-1. Add Capybara to Your Gemfile
+#### 1. Add Capybara to Your Gemfile
 
 ```ruby
 # Gemfile
@@ -284,14 +284,14 @@ group :test do
 end
 ```
 
-2. Install the Gems
+#### 2. Install the Gems
 Run the following command to install the gems:
 
 ```bash
 bundle install
 ```
 
-3. Configure Capybara
+#### 3. Configure Capybara
 Add the following configuration to your `rails_helper.rb` file to set up Capybara:
 
 ```ruby
@@ -304,10 +304,10 @@ Capybara.default_driver = :selenium_chrome # or :selenium_chrome_headless for he
 ### Writing an End-to-End Test
 Let's write an E2E test to ensure the user can sign up, log in, and log out of the application.
 
-1. Create a Feature Spec
+#### 1. Create a Feature Spec
 Create a new file named `user_authentication_spec.rb` in the `spec/features` directory.
 
-2. Write the Test
+#### 2. Write the Test
 Add the following code to `user_authentication_spec.rb`:
 
 ```ruby
@@ -341,7 +341,7 @@ This test simulates the following user actions:
 
 Visiting the sign-up page, filling out the sign-up form and submitting it, logging out, visiting the login page, and logging in with the registered credentials.
 
-3. Run the E2E Test
+#### 3. Run the E2E Test
 
 Run the test suite to execute the E2E tests:
 
