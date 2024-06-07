@@ -339,13 +339,7 @@ end
 
 This test simulates the following user actions:
 
-- Visiting the sign-up page.
-- Filling out the sign-up form and submitting it.
-- Logging out.
-- Visiting the login page.
-- Logging in with the registered credentials.
-
----
+Visiting the sign-up page, filling out the sign-up form and submitting it, logging out, visiting the login page, and logging in with the registered credentials.
 
 3. Run the E2E Test
 
