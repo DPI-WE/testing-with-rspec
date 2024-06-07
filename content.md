@@ -345,6 +345,8 @@ This test simulates the following user actions:
 - Visiting the login page.
 - Logging in with the registered credentials.
 
+---
+
 3. Run the E2E Test
 
 Run the test suite to execute the E2E tests:
