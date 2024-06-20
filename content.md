@@ -76,9 +76,8 @@ end
 ```
 
 This test checks if a User is valid when it has a name and invalid when the name is nil.
-
 <aside>
-Are you wondering where the "be_valid" method came from? 
+Are you wondering where the "be_valid" came from? In RSpec, matchers like "be_valid" are part of a robust set of tools that allow you to express expected outcomes in your tests. These matchers come built-in with RSpec and are used to define and verify the behavior of your code. They make your tests more readable and expressive by providing a clear and concise way to state your expectations. For example, 'be_valid' is a dynamic matcher that corresponds to the 'valid?' predicate method in your models, making it easy to check if an object is valid according to your application's validation rules.
 </aside>
 
 #### 3. Run the Test
