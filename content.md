@@ -77,6 +77,10 @@ end
 
 This test checks if a User is valid when it has a name and invalid when the name is nil.
 
+<aside>
+Are you wondering where the "be_valid" method came from? 
+</aside>
+
 #### 3. Run the Test
 Execute the test suite by running the following command:
 
